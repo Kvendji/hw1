@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>homeWorks 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+<section class="container-fluid homework_first">
+    <div class="container ">
+        <div class="row">
+            <h1 class="col-12"><a href="index.html">Борисенко Екатерина</a></h1>
+            <div class="col-12">
+                <a href="hm1.html" class="btn btn-homework">Домашка 1</a>
+                <a href="#" class="btn btn-homework">Домашка 2</a>
+            </div>
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="firstTask-tab" data-toggle="tab" href="#firstTask" role="tab"
+                       aria-controls="firstTask" aria-selected="true">Task 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="secondTask-tab" data-toggle="tab" href="#secondTask" role="tab"
+                       aria-controls="secondTask" aria-selected="false">Task 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="thirdTask-tab" data-toggle="tab" href="#thirdTask" role="tab"
+                       aria-controls="thirdTask" aria-selected="false">Task 3</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <!-- 1 -->
+                <div class="tab-pane fade show active" id="firstTask" role="tabpanel" aria-labelledby="firstTask-tab">
+                    <div class="col-sm-6 col-12">
+                        <h2 class="col-12">Задание 1</h2>
+                        <div class="col-12">Создайте пустой массив letters
+                            Создайте строку из нескольких слов, например "Backend As A Service"
+                            Напилите код, который разбивает эту строку на массив слов и пушит в массив letters первый
+                            символ каждого слова
+                            Выведите результат в консоль
+                            Объедините все элементы массива letters в одну строку и выведите ее в консоль
+                        </div>
+                        <pre> var  letters = [];
+                        var row = "Backend As A Service";
+                        var newRow = row.split(' ');
+                        newRow.forEach(e => {
+                        letters.push(e[0]);
+                        });
+                        var finishRow = letters.join ( "" );
+                        console.log(letters);
+                        console.log(finishRow);
+                        </pre>
+                        <div class="col-12"> Результат в консоле</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+
+                <div class="tab-pane fade" id="secondTask" role="tabpanel" aria-labelledby="secondTask-tab">
+                    <div class="col-sm-6 col-xs-12">
+                        <h2 class="col-12">Задание 2</h2>
+                        <div class="col-12">Объявите функцию с одним формальным параметром, которая проверяет тип данных
+                            переданного аргумента и:
+                            • если это число, возвращает текущую дату в формате "20.02.2019, 13:21:51"
+                            • в противном случае возвращает строку "Неверный тип данных"
+                            Вызовите функцию
+                        </div>
+                        <pre> var now = new Date();
+                var func = function(x) {
+                     if (typeof (x) === "number") {
+                         console.log(now);
+                     } else {
+                         console.log("Неверный тип данных")
+                     }
+                     return;
+             };
+                        </pre>
+                        <div class="col-12">Для вызова функции в консоли введите func(любое значение)</div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="tab-pane fade" id="thirdTask" role="tabpanel" aria-labelledby="thirdTask-tab">
+                    <div class="col-12">
+                        <h2 class="col-12">Задание 3</h2>
+                        <div class="col-12">Ваша задача: обезопасить свою страницу от внедрения вредоносного кода с
+                            помощью функции валидации testUserText
+                            функция должна вывести на страницу текст пользователя безопасным способом
+                        </div>
+                        <div class="col-12"> Код в main.js</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

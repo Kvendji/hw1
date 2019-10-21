@@ -36,6 +36,20 @@ background: linear-gradient(to right, rgba(39,115,143,1) 0%, rgba(183,222,237,1)
 a { 
 color:#fff;
 }
+pre {
+    background: cornsilk;
+}
+.btn-homework{
+    min-width: 50px;
+    padding: 10px ;
+    background: azure;
+    color: black;
+    border: 1px solid yellow;
+    transition: all .3s;
+}
+.btn-homework:hover {
+    border: red 1px solid;
+}
 
 
 
