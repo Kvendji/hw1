@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>homeWorks 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+<section class="container-fluid homework_first">
+    <div class="container ">
+        <div class="row">
+            <h1 class="col-12"><a href="index.html">Борисенко Екатерина</a></h1>
+            <div class="col-12">
+                <a href="hm1.html" class="btn btn-homework">Домашка 1</a>
+                <a href="hm2.html" class="btn btn-homework">Домашка 2</a>
+                <a href="#" class="btn btn-homework">Домашка 3</a>
+                <a href="hm4.html" class="btn btn-homework">Домашка 4</a>
+            </div>
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="firstTask-tab" data-toggle="tab" href="#firstTask" role="tab"
+                       aria-controls="firstTask" aria-selected="true">Task 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="secondTask-tab" data-toggle="tab" href="#secondTask" role="tab"
+                       aria-controls="secondTask" aria-selected="false">Task 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="thirdTask-tab" data-toggle="tab" href="#thirdTask" role="tab"
+                       aria-controls="thirdTask" aria-selected="false">Task 3</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <!-- 1 -->
+                <div class="tab-pane fade show active" id="firstTask" role="tabpanel" aria-labelledby="firstTask-tab">
+                    <div class="col-sm-6 col-12">
+                        <h2 class="col-12">Задание 1</h2>
+                        <div class="col-12">Объявите функцию без формальных параметров, которая выводит в консоль сама себя и все переданные ей аргументы
+                            Вызовите эту функцию с аргументами 10, false, "google"
+                        </div>
+                        <pre> var func = function() {
+                                console.log(func)
+                                console.log(arguments)
+                            }
+                            func(10, false, "google"
+                        </pre>
+
+                    </div>
+                </div>
+                <!-- 2 -->
+
+                <div class="tab-pane fade" id="secondTask" role="tabpanel" aria-labelledby="secondTask-tab">
+                    <div class="col-sm-6 col-xs-12">
+                        <h2 class="col-12">Задание 2</h2>
+                        <div class="col-12">Объявите функцию userInfo, которая выводит в консоль:
+                            свойство "Дата регистрации: " + свойство data контекста вызова, если свойство registered имеет значение true
+                            сообщение "Незарегистрированный пользователь: " + свойство name в противном случае
+                            ( используйте переменные в литералах )
+                            Создайте два объекта с одинаковым набором свойств:
+                            name ( строка )
+                            registered ( логическое значение )
+                            data ( дата в формате "дд.мм.гг" )
+                            Добавьте каждому объекту метод getInfo, который будет ссылкой на функцию userInfo
+                            Вызовите каждый метод
+                        </div>
+                        <pre>
+                            var userInfo = function () {
+                                 console.log( this.registered ?
+                                    `"Дата регистрации:" + ${this.data}`  :
+                                    `"Незарегистрированный пользователь:"${this.name}`)
+                                }
+                                 var userFirst = {
+                                    name: "Kostya",
+                                    registered: true,
+                                    data: "10.12.2015",
+                                    getInfo: userInfo
+                                }
+                                var userSecond = {
+                                     name: "Katya",
+                                    registered: false,
+                                    data: null,
+                                    getInfo: userInfo
+                                }
+
+                        </pre>
+                        <div class="col-12">Для вызова функции в консоли введите func(любое значение)</div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="tab-pane fade" id="thirdTask" role="tabpanel" aria-labelledby="thirdTask-tab">
+                    <div class="col-12">
+                        <h2 class="col-12">Задание 3</h2>
+                        <div class="col-12">
+                            Есть три объекта: users, posts и comments
+                            ( готовые объекты уже ждут вас по  ссылке )
+                            Написать код функции getPostComments ( postId ),
+                            которая возвращает массив всех комментариев к посту с идентификатором postId
+                            ( с именем автора комментария и текстом комментария )
+                        </div>
+                        <pre class="col-12">
+                                var users = {
+                                        14587: {
+                                                name: "Ivan",
+                                                email: "ivan78@gmail.com"
+                                        },
+                                        28419: {
+                                                name: "Georg",
+                                                email: "georg.klep@gmail.com"
+                                        },
+                                        41457: {
+                                                name: "Stephan",
+                                                email: "stephan.borg@gmail.com"
+                                        }
+                                }
+                                var posts = {
+                                        7891451: {
+                                                author: 14587,
+                                                text: "Imagine we can encapsulate these secondary responsibilities in functions"
+                                        },
+                                        7891452: {
+                                                author: 28419,
+                                                text: `В конструкторе ключевое слово super используется как функция, вызывающая родительский конструктор.
+                                                        Её необходимо вызвать до первого обращения к ключевому слову this в теле конструктора.
+                                                        Ключевое слово super также может быть использовано для вызова функций родительского объекта`
+                                        },
+                                        7891453: {
+                                                author: 28419,
+                                                text: `DOM не обрабатывает или не вынуждает проверять пространство имен как таковое.
+                                                        Префикс пространства имен, когда он связан с конкретным узлом, не может быть изменен`
+                                        },
+                                        7891454: {
+                                                author: 14587,
+                                                text: "Ключевое слово super используется для вызова функций, принадлежащих родителю объекта"
+                                        }
+                                }
+                                var comments = {
+                                        91078454: {
+                                                postId: 7891451,
+                                                author: 28419,
+                                                text: `The static String.fromCharCode() method returns a string created
+                                                        from the specified sequence of UTF-16 code units`
+                                        },
+                                        91078455: {
+                                                postId: 7891451,
+                                                author: 41457,
+                                                text: `HTML элемент  — это механизм для отложенного рендера клиентского контента,
+                                                        который не отображается во время загрузки, но может быть инициализирован при помощи JavaScript`
+                                        },
+                                        91078457: {
+                                                postId: 7891452,
+                                                author: 41457,
+                                                text: "Глобальный объект String является конструктором строк, или, последовательностей символов"
+                                        },
+                                        91078458: {
+                                                postId: 7891452,
+                                                author: 14587,
+                                                text: `The Element.namespaceURI read-only property returns the namespace URI of the element,
+                                                        or null if the element is not in a namespace`
+                                        }
+                                }
+
+                                var arrayComment = []
+
+                                function getPostComments ( postId ) {
+                                        var textNew
+                                        comments.postId = postId ?
+                                           textNew = (posts[postId].text) :
+                                                null
+                                         var authorNew = posts[postId].author
+                                         var nameUser
+                                         users[authorNew] ?
+                                                nameUser = users[authorNew].name : "Такого ученика нет"
+
+                                        var  NewUser = {
+                                                name:`${nameUser}`,
+                                                comment : `${textNew}`
+                                        }
+                                      var arrayCommentLenght = arrayComment.push(NewUser)
+                                      console.log(arrayComment)
+
+                                }
+
+                                console.log ( getPostComments ( 7891451 ) )
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
